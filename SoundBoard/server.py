@@ -8,7 +8,7 @@ GPIO.setup(13,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(15,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(19,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 client_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-IP = ""
+IP = "" #client ip
 try:
     while True:
         if GPIO.input(11) == GPIO.HIGH:
