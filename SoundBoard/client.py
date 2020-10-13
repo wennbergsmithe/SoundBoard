@@ -1,4 +1,5 @@
 import socket
+import time
 from playsound import playsound
 server_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 server_socket.bind(('',6666))
@@ -14,6 +15,7 @@ try:
             playsound('3.wav')
         if str(data) == "b'4'":
             playsound('4.wav')
+        #time.sleep(1)
 except:
     print("audio file not found")
 finally:
